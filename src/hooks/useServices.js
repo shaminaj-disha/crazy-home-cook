@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 
 const useServices = () => {
-    const [reviews, setReviews] = useState([]);
+    const [services, setServices] = useState([]);
     useEffect(() => {
-        fetch('review.json')
+        fetch('services.json')
             .then(res => res.json())
-            .then(data => setReviews(data));
+            .then(data => setServices(data));
     }, []);
-    return [reviews, setReviews];
+    return [services, setServices];
 };
 
 export default useServices;

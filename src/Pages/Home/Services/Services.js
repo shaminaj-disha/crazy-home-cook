@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Service from '../Service/Service';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Services = () => {
-    const [services, setServices] = useState([]);
-    useEffect(() => {
-        fetch('services.json')
-            .then(res => res.json())
-            .then(data => setServices(data));
-    }, []);
+const Services = ({service}) => {
+    const { id, name, img, description, price } = service;
+    const navigate = useNavigate();
+    const navigateToCheckout = id => {
+        navigate(`/checkout-${id}`);
+    }
     return (
-        <div id='services' className='container my-5'>
-            <h1 className='text-center text-primary my-5'>Offered Services</h1>
-            <div className='row row-cols-1 row-cols-md-3 g-4'>
-                {services.map(service => <Service
-                    key={service.id}
-                    service={service}></Service>)}
+        <div class="col">
+            <div class="card h-100">
+                <img className='w-100' src={img} alt="" />
+                <div class="card-body">
+                    <h5 class="card-title">{name}</h5>
+                    <p>Price: {price}</p>
+                    <p class="card-text">{description}</p>
+                    <button onClick={() => navigateToCheckout(id)} className='btn btn-primary'>Book: {name}</button>
+                </div>
             </div>
         </div>
     );
