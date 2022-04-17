@@ -1,17 +1,17 @@
 [
   {
     "id": "624c25b2990a7df785afe960",
-    "question": "What is 'Context API'?\r\n",
-    "answer": "The Context API is a React structure that enables us to exchange unique details and assists in solving prop-drilling from all levels of our application. The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to 'prop drilling' or moving props from grandparent to parent to child, and so on. React's context allows us to share information to any component, by storing it in a central place and allowing access to any component that requests it. Usually we are only able to pass data from parent to child via props.\r\n"
+    "question": "What are the differences between Authorization and Authentication?\r\n",
+    "answer": "Authentication is a process to identify the users for providing the access to the system, while in Authorization process, person’s or user’s authorities are checked for accessing the resources. In authentication process, users or persons are verified but in Authorization, users or persons are validated. Authentication is done before the authorization process and Authorization is done after the authentication process. Authorization usually needs user’s login details. While Authorization needs user’s privilege or security levels. Authentication determines whether the person is user or not but Authorization determines what permission the user have.\r\n"
   },
   {
     "id": "624c25b2a5080bc66d44e10f",
-    "question": "What are 'Semantic Tags'?\r\n",
-    "answer": "Semantic HTML or semantic markup is HTML that refers to the tags which provide meaning to a HTML page rather than just presentation. It is processed by traditional web browsers as well as by many other user agents. It makes HTML more comprehensible by better defining the different sections and layout of web pages. It makes web pages more informative and adaptable, allowing browsers and search engines to better interpret content. Examples of non-semantic elements: <div> and <span> Tells nothing about its content. Examples of semantic elements: <form>, <table>, and <article> Clearly defines its content.\r\n"
+    "question": "Why are you using Firebase? What other options do you have to implement authentication??\r\n",
+    "answer": "Google Firebase is a Google-backed application development software that enables developers to develop iOS, Android and Web apps. Firebase provides tools for tracking analytics, reporting and fixing app crashes, creating marketing and product experiment. Additionally, it helps in the easy storing and retrieval of dynamic content. If we decide to develop the application without any form of custom coding the backend, Firebase makes this easy. It provides a seamless way to integrate with Google analytics using which the user behavioral data can be acquired, and insightful information can be generated through it. Other than Firebase, we have some other options for authentication like Okta, Auth0, OneLogin, Microsoft Azure Active Directory etc.\r\n"
   },
   {
     "id": "624c25b2ed501db274e24947",
-    "question": "What are the differences Between 'Inline', 'Inline Block' and 'Block' elements?\r\n",
-    "answer": "Inline : The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height. Here are a few elements that have a default inline property: <span>, <a>, <img>, <em>, <strong>, <i>, <small> etc. Inline-Block: The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height. Block: The element will start on a new line and occupy the full width available. And you can set width and height values. Some Examples of Block elements are: <div>, <h1>, <p>, <li>, <section>, etc.\r\n"
+    "question": "What other services does firebase provide other than authentication?\r\n",
+    "answer": "Firebase is a full package that can help in developing our web or mobile applications faster with fewer resources and more efficiency. There are many services which Firebase provides. Authentication is one of them. But there are other useful services. Some of the most significant services are: Cloud Firestore, Cloud Functions, Authentication, Hosting, Cloud Storage, Google Analytics, Predictions, Cloud Messaging, Dynamic Links, Remote Config etc.\r\n"
   }
 ]

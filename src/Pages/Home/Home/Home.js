@@ -24,7 +24,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div id='reviews' className='container my-5'>
-                <h1 className='text-center text-primary my-5'>Offered Services: ({newServices.length}/{services.length})</h1>
+                <h1 className='text-center text-primary my-5'>My Services: ({newServices.length}/{services.length})</h1>
                 <div className='row row-cols-1 row-cols-md-3 g-4'>
                     {newServices.map(service => <Services
                         key={service.id}

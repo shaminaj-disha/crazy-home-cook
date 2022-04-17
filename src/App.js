@@ -14,10 +14,17 @@ import Checkout from './Pages/Checkout/Checkout';
 import Register from './Pages/Login/Register/Register';
 import useServices from './hooks/useServices';
 import useReviews from './hooks/useReviews';
+import { useEffect, useState } from 'react';
 
 function App() {
   const [services] = useServices();
   const [reviews] = useReviews();
+  const [blogs, setBlogs] = useState([]);
+  useEffect(() => {
+    fetch('blogs.json')
+      .then(res => res.json())
+      .then(data => setBlogs(data));
+  }, []);
   return (
     <div>
       <Header></Header>
@@ -25,7 +32,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/services" element={<div id='services' className='container my-5'>
-          <h1 className='text-center text-primary my-5'>Offered Services: ({services.length}/{services.length})</h1>
+          <h1 className='text-center text-primary my-5'>My Services: ({services.length}/{services.length})</h1>
           <div className='row row-cols-1 row-cols-md-3 g-4'>
             {services.map(service => <Services
               key={service.id}
@@ -40,7 +47,12 @@ function App() {
               review={review}></Reviews>)}
           </div>
         </div>}></Route>
-        <Route path="/blogs" element={<Blogs></Blogs>}></Route>
+        <Route path="/blogs" element={blogs.map(blog =>
+          <Blogs
+            key={blog.id}
+            blog={blog}>
+          </Blogs>)}>
+        </Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>

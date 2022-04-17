@@ -1,44 +1,44 @@
 [
     {
         "id": 1,
-        "name": "ENGINE DIAGNOSTIC",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/dGDkr4v/1.jpg"
+        "name": "Steak Meal",
+        "price": "500",
+        "description": "Who doesn't love steaks? A variety of steak items are available for home delivery. Good quality meat is served with vegetables. So hurry up and order now.",
+        "img": "https://img.freepik.com/free-photo/chicken-steak-with-lemon-tomato-chili-carrot-white-plate_1150-25887.jpg?t=st=1650210612~exp=1650211212~hmac=11b907c7a1267e805609999dc0a447a0acd29bcbb3ca349f95d95113b9a34f6f&w=740"
     },
     {
         "id": 2,
-        "name": "WHEEL ALIGNMENT",
-        "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/tY8dmnP/2.jpg"
+        "name": "Spicy Shrimp Noodles",
+        "price": "200",
+        "description": "Shout out to all the spicy lovers out there. Our Kitchen brings you the spiciest garlic flavored shrimp noodles to meet your cravings for spicy food.",
+        "img": "https://img.freepik.com/free-photo/pasta-spaghetti-with-shrimps-sauce_1220-5072.jpg?t=st=1650210612~exp=1650211212~hmac=566defe9c91912f1591f9a564368dabc0c903ae14531328526ea647f0e544259&w=740"
     },
     {
         "id": 3,
-        "name": "OIL CHANGING",
-        "price": "150",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/Yh04YVw/3.jpg"
+        "name": "Burger and Fries",
+        "price": "250",
+        "description": "Tired of eating regular meals everyday? Try our fast food. We provide burger, fries and other fast food items too. These are finger licking good!",
+        "img": "https://img.freepik.com/free-photo/big-hamburger-with-double-beef-french-fries_252907-8.jpg?w=740"
     },
     {
         "id": 4,
-        "name": "BRAKE REPARING",
+        "name": "Caesar Salad",
         "price": "180",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/ZX2Cbkn/4.jpg"
+        "description": "Are you dieting? Can't eat delicious foods? Don't worry we also provide healthy delicious salads. It's perfectly balanced with nutrition so you are gonna love it for sure.",
+        "img": "https://img.freepik.com/free-photo/caesar-salad-with-shrimps-black-background_210632-2733.jpg?w=740"
     },
     {
         "id": 5,
-        "name": "WASH AND GLASSING",
+        "name": "Fried Rice",
         "price": "100",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa.",
-        "img": "https://i.ibb.co/FgQ3jXp/5.jpg"
+        "description": "Rice is one of the most diverse dishes. It can be eaten with almost anything and can be prepared in a lot of different ways. Try ours, it's unique in it's own delicious way.",
+        "img": "https://img.freepik.com/free-photo/american-shrimp-fried-rice-served-with-chili-fish-sauce-thai-food_1150-26580.jpg?t=st=1650212346~exp=1650212946~hmac=566393e818afa946a2de69ec50b40fbd91cc476c7043fe4d6464604c42571e8b&w=740"
     },
     {
         "id": 6,
-        "name": "COMPLETE ANALYSIS",
-        "price": "300",
-        "description": "Lorem ipsum dolor sit amet, consectetu radipisi cing elitBeatae autem aperiam nequ quaera molestias voluptatibus harum ametipsa",
-        "img": "https://i.ibb.co/zJy5ZDd/6.jpg"
+        "name": "Sweet Pastry",
+        "price": "350",
+        "description": "Dessert Alert! Your meal can't be completed without some sweet treats. We can make any type of dessert you like, you can also specify the sweetness level to your liking.",
+        "img": "https://img.freepik.com/free-photo/side-view-mix-cookies-with-walnut-chocolate-chips-cottage-cheese-puff-pastry-vanilla-sugar-powder_141793-5018.jpg?t=st=1650220065~exp=1650220665~hmac=e18e53ed67c9a6399eb79b141546441c6f44cd2bae9570e30a0cfce6a3897532&w=740"
     }
 ]

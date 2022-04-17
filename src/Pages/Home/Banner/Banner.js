@@ -18,8 +18,10 @@ const Banner = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <h3>First slide label</h3>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    <div className='text-light'>
+                        <h3>Too lazy to cook?</h3>
+                        <p>Don't feel like cooking? Just order!</p>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -28,10 +30,11 @@ const Banner = () => {
                     src={banner2}
                     alt="Second slide"
                 />
-
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <div className='text-dark'>
+                        <h3>Worry about the taste?</h3>
+                        <p>Home cooked meals are the best!</p>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -40,12 +43,11 @@ const Banner = () => {
                     src={banner3}
                     alt="Third slide"
                 />
-
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
-                    <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-                    </p>
+                    <div className='text-light'>
+                        <h3>Cook up a storm</h3>
+                        <p>I provide variety of delicious dishes in a single order</p>
+                    </div>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>
