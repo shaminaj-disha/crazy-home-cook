@@ -6,7 +6,7 @@ const Review = (props) => {
     return (
         <div class="col">
             <div class="card h-100">
-                <div className='d-block text-center mt-2'><img className='rounded-circle w-50' src={img} alt="" /></div>
+                <div className='d-block text-center mt-2'><img className='rounded-circle' style={{width:'150px', height:'150px'}} src={img} alt="" /></div>
                 <div class="card-body">
                     <h5 class="card-title">{name}</h5>
                     <p class="card-text d-flex align-items-center"><span className='font-bold me-2'>Rating: </span> <StarRatings
