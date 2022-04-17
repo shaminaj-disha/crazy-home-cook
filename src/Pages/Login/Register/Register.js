@@ -44,13 +44,7 @@ const Register = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
-        // const name = event.target.name.value; //event.target.fieldName.value //not id
-        // const email = event.target.email.value;
-        // const password = event.target.password.value;
-        // const agree = event.target.terms.checked;
-        // if (agree) {
-        //     createUserWithEmailAndPassword(email, password);
-        // }
+
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
         console.log('Updated profile');

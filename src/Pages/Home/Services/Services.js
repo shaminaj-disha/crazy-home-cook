@@ -8,13 +8,13 @@ const Services = ({service}) => {
         navigate(`/checkout-${id}`);
     }
     return (
-        <div class="col">
-            <div class="card h-100">
+        <div className="col">
+            <div className="card h-100">
                 <img className='w-100' src={img} alt="" />
-                <div class="card-body">
-                    <h5 class="card-title">{name}</h5>
+                <div className="card-body">
+                    <h5 className="card-title">{name}</h5>
                     <p>Price: {price}</p>
-                    <p class="card-text">{description}</p>
+                    <p className="card-text">{description}</p>
                     <button onClick={() => navigateToCheckout(id)} className='btn btn-primary'>Checkout: {name}</button>
                 </div>
             </div>
