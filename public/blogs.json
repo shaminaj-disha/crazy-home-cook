@@ -1,0 +1,17 @@
+[
+  {
+    "id": "624c25b2990a7df785afe960",
+    "question": "What is 'Context API'?\r\n",
+    "answer": "The Context API is a React structure that enables us to exchange unique details and assists in solving prop-drilling from all levels of our application. The React Context API is a way for a React app to effectively produce global variables that can be passed around. This is the alternative to 'prop drilling' or moving props from grandparent to parent to child, and so on. React's context allows us to share information to any component, by storing it in a central place and allowing access to any component that requests it. Usually we are only able to pass data from parent to child via props.\r\n"
+  },
+  {
+    "id": "624c25b2a5080bc66d44e10f",
+    "question": "What are 'Semantic Tags'?\r\n",
+    "answer": "Semantic HTML or semantic markup is HTML that refers to the tags which provide meaning to a HTML page rather than just presentation. It is processed by traditional web browsers as well as by many other user agents. It makes HTML more comprehensible by better defining the different sections and layout of web pages. It makes web pages more informative and adaptable, allowing browsers and search engines to better interpret content. Examples of non-semantic elements: <div> and <span> Tells nothing about its content. Examples of semantic elements: <form>, <table>, and <article> Clearly defines its content.\r\n"
+  },
+  {
+    "id": "624c25b2ed501db274e24947",
+    "question": "What are the differences Between 'Inline', 'Inline Block' and 'Block' elements?\r\n",
+    "answer": "Inline : The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height. Here are a few elements that have a default inline property: <span>, <a>, <img>, <em>, <strong>, <i>, <small> etc. Inline-Block: The element doesn’t start on a new line and only occupy just the width it requires. You can’t set the width or height. Block: The element will start on a new line and occupy the full width available. And you can set width and height values. Some Examples of Block elements are: <div>, <h1>, <p>, <li>, <section>, etc.\r\n"
+  }
+]

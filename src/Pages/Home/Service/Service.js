@@ -5,7 +5,7 @@ const Service = ({ service }) => {
     const { id, name, img, description, price } = service;
     const navigate = useNavigate();
     const navigateToCheckout = id => {
-        navigate(`/${id}/checkout`);
+        navigate(`/checkout-${id}`);
     }
     return (
         <div class="col">
