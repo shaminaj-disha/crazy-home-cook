@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import About from './Pages/About/About';
 import './App.css';
 import Blogs from './Pages/Blogs/Blogs';
+import Reviews from './Pages/Home/Reviews/Reviews';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import RequireAuth from './Pages/Login/RequireAuth/RequireAuth';
@@ -10,14 +11,24 @@ import Header from './Pages/Shared/Header/Header';
 import NotFound from './Pages/Shared/NotFound/NotFound';
 import Checkout from './Pages/Checkout/Checkout';
 import Register from './Pages/Login/Register/Register';
+import useReviews from './hooks/useReviews';
 
 function App() {
+  const [reviews] = useReviews();
   return (
     <div>
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/reviews" element={<div id='reviews' className='container my-5'>
+          <h1 className='text-center text-primary my-5'>Customer Reviews ({reviews.length})</h1>
+          <div className='row row-cols-1 row-cols-md-3 g-4'>
+            {reviews.map(review => <Reviews
+              key={review.id}
+              review={review}></Reviews>)}
+          </div>
+        </div>}></Route>
         <Route path="/blogs" element={<Blogs></Blogs>}></Route>
         <Route path="/about" element={<About></About>}></Route>
         <Route path="/login" element={<Login></Login>}></Route>

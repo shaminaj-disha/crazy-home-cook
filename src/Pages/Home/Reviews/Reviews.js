@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import Review from '../Review/Review';
+import React from 'react';
+import StarRatings from 'react-star-ratings/build/star-ratings';
 
-const Reviews = () => {
-    const [reviews, setReviews] = useState([]);
-    useEffect(() => {
-        fetch('review.json')
-            .then(res => res.json())
-            .then(data => setReviews(data));
-    }, []);
+const Reviews = (props) => {
+    const { name, img, rating, review } = props.review;
     return (
-        <div id='reviews' className='container my-5'>
-            <h1 className='text-center text-primary my-5'>Customer Reviews</h1>
-            <div className='row row-cols-1 row-cols-md-3 g-4'>
-                {reviews.map(review => <Review
-                    key={review.id}
-                    review={review}></Review>)}
+        <div class="col">
+            <div class="card h-100">
+                <div className='d-block text-center mt-2'><img className='rounded-circle' style={{width:'150px', height:'150px'}} src={img} alt="" /></div>
+                <div class="card-body">
+                    <h5 class="card-title">{name}</h5>
+                    <p class="card-text d-flex align-items-center"><span className='font-bold me-2'>Rating: </span> <StarRatings
+                        rating={rating}
+                        starRatedColor="GoldenRod"
+                        starDimension="20px"
+                        starSpacing="5px"
+                    /><span className='ms-2'>({rating})</span></p>
+                    <p class="card-text">{review}</p>
+                </div>
             </div>
         </div>
     );
