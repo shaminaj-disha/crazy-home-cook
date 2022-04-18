@@ -2,7 +2,6 @@
 
 ## [Live Website Link](https://home-cook-delight.web.app/)
 [https://home-cook-delight.web.app/](https://home-cook-delight.web.app/)
-[https://home-cook-delight.firebaseapp.com/](https://home-cook-delight.firebaseapp.com/)
 
 --------------
 ### Features and Functionality
