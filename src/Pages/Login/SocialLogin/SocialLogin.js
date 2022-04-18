@@ -7,7 +7,9 @@ import google from '../../../images/social/google.png'
 import github from '../../../images/social/github.png'
 
 const SocialLogin = () => {
+    // sign in with google
     const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
+    // sign in with github
     const [signInWithGithub, githubUser, githubLoading, githubError] = useSignInWithGithub(auth);
     const navigate = useNavigate();
     let errorElement;

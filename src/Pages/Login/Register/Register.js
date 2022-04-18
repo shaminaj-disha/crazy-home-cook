@@ -19,7 +19,7 @@ const Register = () => {
         user,
         loading,
         error,
-    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+    ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true }); //email verification
 
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
@@ -45,16 +45,16 @@ const Register = () => {
         const confirmPassword = confirmPasswordRef.current.value;
 
         if (password !== confirmPassword) {
-            setPasswordError("Your two passwords didn't match");
+            setPasswordError("Your two passwords didn't match"); //when passwords don't match
             return;
         }
         if (password.length < 6) {
-            setPasswordError("Password must be of 6 characters or longer");
+            setPasswordError("Password must be of 6 characters or longer"); //when password is less than 6 characters
             return;
         }
 
-        await createUserWithEmailAndPassword(email, password);
-        await updateProfile({ displayName: name });
+        await createUserWithEmailAndPassword(email, password); //register using react firebase hooks
+        await updateProfile({ displayName: name }); //update profile using react firebase hooks
         console.log('Updated profile');
         navigate('/home');
     }

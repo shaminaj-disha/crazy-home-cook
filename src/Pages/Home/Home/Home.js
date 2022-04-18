@@ -12,14 +12,16 @@ const Home = () => {
     const [reviews] = useReviews();
     const newReviews = reviews.slice(0, 3);
     let navigate = useNavigate();
+
     const showAllServices = () => {
-        const path = "/services";
+        const path = "/services"; // navigate to services to show all of them
         navigate(path);
     } 
     const showAllReviews = () => {
-        const path = "/reviews";
+        const path = "/reviews"; // navigate to reviews to show all of them
         navigate(path);
     }
+
     return (
         <div>
             <Banner></Banner>

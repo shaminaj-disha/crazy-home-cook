@@ -5,7 +5,7 @@ const Services = ({service}) => {
     const { id, name, img, description, price } = service;
     const navigate = useNavigate();
     const navigateToCheckout = id => {
-        navigate(`/checkout-${id}`);
+        navigate(`/checkout-${id}`); // navigate to dynamic url
     }
     return (
         <div className="col">

@@ -31,7 +31,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true });
+        navigate(from, { replace: true }); //navigate to home
     }
 
     if (error) {
@@ -43,17 +43,17 @@ const Login = () => {
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
 
-        await signInWithEmailAndPassword(email, password);
+        await signInWithEmailAndPassword(email, password); // sign in using react firebase hooks
     }
 
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
-            await sendPasswordResetEmail(email);
-            toast('Sent email');
+            await sendPasswordResetEmail(email); // reset password in using react firebase hooks
+            toast('Sent email'); // toast for reset 
         }
         else {
-            toast('please enter your email address');
+            toast('please enter your email address'); // toast for when user don't put email in the input
         }
     }
 
