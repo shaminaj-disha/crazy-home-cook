@@ -20,8 +20,8 @@
 * If random path names are given which does not match any route, then it will route to Not Found
 
 --------------
-### Technologies
-* React
+### Technologies (Frameworks, Libraries)
+* HTML, CSS, Javascript, React
 * React Router Dom
 * Firebase Authentication
 * React Firebase Hooks
