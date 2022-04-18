@@ -33,7 +33,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/home" element={<Home></Home>}></Route>
         <Route path="/services" element={<div id='services' className='container my-5'>
-          <h1 className='text-center text-primary my-5'>My Services: ({services.length}/{services.length})</h1>
+          <h1 className='text-center text-dark my-5'>My Services: ({services.length}/{services.length})</h1>
           <div className='row row-cols-1 row-cols-md-3 g-4'>
             {services.map(service => <Services
               key={service.id}
@@ -41,7 +41,7 @@ function App() {
           </div>
         </div>}></Route>
         <Route path="/reviews" element={<div id='reviews' className='container my-5'>
-          <h1 className='text-center text-primary my-5'>Customer Reviews: ({reviews.length}/{reviews.length})</h1>
+          <h1 className='text-center text-dark my-5'>Customer Reviews: ({reviews.length}/{reviews.length})</h1>
           <div className='row row-cols-1 row-cols-md-3 g-4'>
             {reviews.map(review => <Reviews
               key={review.id}
