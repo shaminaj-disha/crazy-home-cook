@@ -25,10 +25,6 @@ const Register = () => {
 
     const navigate = useNavigate();
 
-    const navigateLogin = () => {
-        navigate('/login');
-    }
-
     if (loading || updating) {
         return <Loading></Loading>
     }
@@ -84,7 +80,7 @@ const Register = () => {
                 <Button disabled={!agree} variant="primary w-50 mx-auto d-block mb-2" type="submit">Register</Button>
             </Form>
             {errorElement}
-            <p>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none' onClick={navigateLogin}>Please Login</Link> </p>
+            <p className='mt-3'>Already have an account? <Link to="/login" className='text-primary pe-auto text-decoration-none'>Please Login</Link> </p>
             <SocialLogin></SocialLogin>
         </div>
     );

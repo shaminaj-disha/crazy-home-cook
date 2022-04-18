@@ -46,10 +46,6 @@ const Login = () => {
         await signInWithEmailAndPassword(email, password);
     }
 
-    const navigateRegister = event => {
-        navigate('/register');
-    }
-
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
@@ -74,8 +70,8 @@ const Login = () => {
                 <Button variant="primary w-50 mx-auto d-block mb-2" type="submit">Login</Button>
             </Form>
             {errorElement}
-            <p>New to Crazy Home Cook? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-            <p>Forget Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
+            <p className='mt-3'>New to Crazy Home Cook? <Link to="/register" className='text-primary pe-auto text-decoration-none'>Please Register</Link> </p>
+            <p>Forgot Password? <button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Reset Password</button> </p>
             <SocialLogin></SocialLogin>
             <ToastContainer />
         </div>
