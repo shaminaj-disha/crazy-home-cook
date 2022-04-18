@@ -1,8 +1,9 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 const Checkout = () => {
+    const {serviceId} = useParams();
     const [agree, setAgree] = useState(false);
     const nameRef = useRef('');
     const emailRef = useRef('');
@@ -18,12 +19,12 @@ const Checkout = () => {
         const address = addressRef.current.value;
         const phone = phoneRef.current.value;
         console.log(name, email, address, phone);
-        navigate('/home');
+        navigate('/booking');
     }
     return (
         <div>
             <div className='container w-50 mx-auto'>
-                <h2 className='text-primary text-center mt-2'>Please Fill Up</h2>
+                <h2 className='text-primary text-center my-5'>Fill up the form for Service - {serviceId}</h2>
                 <Form onSubmit={handleSubmit}>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Control ref={nameRef} type="text" placeholder="Your Name" required />

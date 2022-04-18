@@ -15,6 +15,7 @@ import Register from './Pages/Login/Register/Register';
 import useServices from './hooks/useServices';
 import useReviews from './hooks/useReviews';
 import { useEffect, useState } from 'react';
+import Booking from './Pages/Booking/Booking';
 
 function App() {
   const [services] = useServices();
@@ -57,6 +58,7 @@ function App() {
         <Route path="/login" element={<Login></Login>}></Route>
         <Route path="/register" element={<Register></Register>}></Route>
         <Route path="/checkout-:serviceId" element={<RequireAuth><Checkout></Checkout></RequireAuth>}></Route>
+        <Route path="/booking" element={<Booking></Booking>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
