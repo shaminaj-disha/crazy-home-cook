@@ -11,7 +11,9 @@ const Register = () => {
     const nameRef = useRef('');
     const emailRef = useRef('');
     const passwordRef = useRef('');
+    const confirmPasswordRef = useRef('');
     const [agree, setAgree] = useState(false);
+    const [passwordError, setPasswordError] = useState('');
     const [
         createUserWithEmailAndPassword,
         user,
@@ -35,8 +37,8 @@ const Register = () => {
         console.log('user', user);
     }
 
-    if (error || updateError) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    if (error || updateError || passwordError) {
+        errorElement = <p className='text-danger'>Error: {error?.message} {updateError?.message} {passwordError}</p>
     }
 
     const handleRegister = async (event) => {
@@ -44,6 +46,16 @@ const Register = () => {
         const name = nameRef.current.value;
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
+        const confirmPassword = confirmPasswordRef.current.value;
+
+        if (password !== confirmPassword) {
+            setPasswordError("Your two passwords didn't match");
+            return;
+        }
+        if (password.length < 6) {
+            setPasswordError("Password must be of 6 characters or longer");
+            return;
+        }
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName: name });
@@ -61,7 +73,10 @@ const Register = () => {
                     <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
+                    <Form.Control ref={passwordRef} type="password" placeholder="Enter Password (6 characters or longer)" required />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
+                    <Form.Control ref={confirmPasswordRef} type="password" placeholder="Confirm Password" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check onClick={() => setAgree(!agree)} className={`${agree ? '' : 'text-danger'}`} type="checkbox" label="Accept terms and conditions" />
