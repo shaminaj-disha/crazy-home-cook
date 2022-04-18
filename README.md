@@ -1,7 +1,7 @@
 # Crazy Home Cook
 
-## [Live Website Link](https://endearing-naiad-5c6e3c.netlify.app)
-[https://endearing-naiad-5c6e3c.netlify.app](https://endearing-naiad-5c6e3c.netlify.app)
+## [Live Website Link](https://home-cook-delight.web.app/)
+[https://home-cook-delight.web.app/](https://home-cook-delight.web.app/)
 
 --------------
 ### Features and Functionality
