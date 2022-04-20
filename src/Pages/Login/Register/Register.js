@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -24,6 +24,8 @@ const Register = () => {
     const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
     const navigate = useNavigate();
+    const location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     if (loading || updating) {
         return <Loading></Loading>
@@ -58,7 +60,8 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password); // register using react firebase hooks
         await updateProfile({ displayName: name }); // update profile using react firebase hooks
         console.log('Updated profile');
-        navigate('/home');
+        // navigate('/home');
+        navigate(from, { replace: true }); //navigate to previous
     }
     return (
         <div className='container w-50 mx-auto'>

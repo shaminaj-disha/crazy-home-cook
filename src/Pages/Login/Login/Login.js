@@ -31,7 +31,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate(from, { replace: true }); //navigate to home
+        navigate(from, { replace: true }); //navigate to previous
     }
 
     if (error) {
